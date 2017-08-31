@@ -5,7 +5,7 @@
     <title></title>
     <link rel="stylesheet" href="vendor/foundation.min.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">     
+    <link rel="stylesheet" href="style.css">
       <script async>(function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
       js = d.createElement(s); js.id = id;
@@ -15,7 +15,17 @@
   </head>
 
 <body><link rel="stylesheet" href="font-awesome.min.css">
-
+  <div class="drop-down-nav">
+    <i class="fa fa-times" aria-hidden="true" onclick="closeNav()"></i>
+    <p class="drop-down-nav-heart">( <i class="fa fa-heart button-heart" aria-hidden="true"></i> );</p>
+    <p onclick="location.href = 'projects.html';"><a href="projects.html">Projects</a></p>
+    <p onclick="location.href = 'events.html';"><a href="events.html">Events</a></p>
+    <p onclick="location.href = 'team.html';"><a href="team.html">Team</a></p>
+    <p onclick="location.href = 'join.html';"><a href="join.html">Join</a></p>
+<p onclick="location.href = 'apply.html';"><a href="apply.html">Apply</a></p>
+    <p onclick="location.href = 'contact.html';"><a href="contact.html">Non Profits</a></p>
+    <p onclick="about.html';"><a href="about.html">About</a></p>
+  </div>
   <header class="sticky-nav">
   <div class="header-wrap">
     <nav>
@@ -27,18 +37,37 @@
           <li><a href="events.html">Events</a></li>
           <li><a href="team.html">Team</a></li>
           <li><a href="join.html">Join</a></li>
-          <li><a href="contact.html">Contact</a></li>
+<li><a href="apply.html">Apply</a></li>
+          <li><a href="contact.html">Non Profits</a></li>
+
           <li><a href="about.html">About</a></li>
+          <i class="fa fa-bars" style="color: #222;" aria-hidden="true" onclick="openNav()"></i>
+          <script type="text/javascript">
+            var dropDownNav = document.querySelector(".drop-down-nav");
+            var faTimes = document.querySelector(".fa-times");
+            var faBars = document.querySelector(".fa-bars");
+            function closeNav() {
+              dropDownNav.style.width = 0;
+              faTimes.style.display = 'none';
+            }
+            function openNav() {
+              dropDownNav.style.width = '80%';
+              dropDownNav.style.display = 'block';
+              faTimes.style.display = 'block';
+            }
+          </script>
         </ul>
       </div>
     </nav>
 </header>
 
   <link rel="stylesheet" href="font-awesome.min.css">
-
-    <section class="coming-soon">
-      <h1>PAGE UNDER CONSTRUCTION! <i class="fa fa-cog" aria-hidden="true"></i></h1>
-    </section>
+  <main class="">
+    <div class="about-page">
+      <h3>We are a dedicated and passionate team of developers committed to creating websites free of charge for local non-profits.</h3>
+      <a href="http://codingforgoodutd.us16.list-manage2.com/subscribe?u=918e7a2cb7444c685f666eae4&id=2e513f06d7" style="margin-top: 10px;"><button type="button" class="primary-button" name="button">Join Our Mailing List <i class="fa fa-heart button-heart" aria-hidden="true"></i></button></a>
+    </div>
+  </main>
 <footer>
   <div class="row">
     <div class="small-6 columns text-center">

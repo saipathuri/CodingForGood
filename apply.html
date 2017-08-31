@@ -15,6 +15,17 @@
   </head>
 
 <body><link rel="stylesheet" href="font-awesome.min.css">
+  <div class="drop-down-nav">
+    <i class="fa fa-times" aria-hidden="true" onclick="closeNav()"></i>
+    <p class="drop-down-nav-heart">( <i class="fa fa-heart button-heart" aria-hidden="true"></i> );</p>
+    <p onclick="location.href = 'projects.html';"><a href="projects.html">Projects</a></p>
+    <p onclick="location.href = 'events.html';"><a href="events.html">Events</a></p>
+    <p onclick="location.href = 'team.html';"><a href="team.html">Team</a></p>
+    <p onclick="location.href = 'join.html';"><a href="join.html">Join</a></p>
+<p onclick="location.href = 'apply.html';"><a href="apply.html">Apply</a></p>
+    <p onclick="location.href = 'contact.html';"><a href="contact.html">Non Profits</a></p>
+    <p onclick="about.html';"><a href="about.html">About</a></p>
+  </div>
 
   <header class="sticky-nav">
   <div class="header-wrap">
@@ -31,15 +42,39 @@
           <li><a href="contact.html">Non Profits</a></li>
 
           <li><a href="about.html">About</a></li>
+          <i class="fa fa-bars" style="color: #222;" aria-hidden="true" onclick="openNav()"></i>
+          <script type="text/javascript">
+            var dropDownNav = document.querySelector(".drop-down-nav");
+            var faTimes = document.querySelector(".fa-times");
+            var faBars = document.querySelector(".fa-bars");
+            function closeNav() {
+              dropDownNav.style.width = 0;
+              faTimes.style.display = 'none';
+            }
+            function openNav() {
+              dropDownNav.style.width = '80%';
+              dropDownNav.style.display = 'block';
+              faTimes.style.display = 'block';
+            }
+          </script>
         </ul>
       </div>
     </nav>
 </header>
 
-  <link rel="stylesheet" href="font-awesome.min.css">
+  <main>
 
-    <section class="coming-soon">
-      <h1>PAGE UNDER CONSTRUCTION! <i class="fa fa-cog" aria-hidden="true"></i></h1>
+    <section>
+      <div class="row">
+        <div class="large-12">
+          <div class="large-12 large-centered no-header-page">
+            <h1>Join Our Team!<h1>
+
+            <p>We're looking for expirienced web developers to join our volunteer development team. Fill out the application to join us.</p>
+          </div>
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdaF_fb1c3K_0x8OM_bW9nHXjh8vqBRH8z6VuX5JTm7_aYDIQ/viewform?embedded=true" width="1140" height="1800" frameborder="0" marginheight="0" marginwidth="0" class="google-form">Loading...</iframe>
+        </div>
+      </div>
     </section>
 <footer>
   <div class="row">
