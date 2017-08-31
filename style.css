@@ -247,7 +247,8 @@ li {
   height: 80vh;
   border-radius: 3px;
   display: table;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.10), 0 3px 6px rgba(0,0,0,0.18);
+  -webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.10), 0 3px 6px rgba(0,0,0,0.18);
+          box-shadow: 0 3px 6px rgba(0,0,0,0.10), 0 3px 6px rgba(0,0,0,0.18);
 
 }
 
@@ -379,8 +380,8 @@ footer p {
 /*page team*/
 
 .team-hero {
-  background: #003973;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #E5E5BE, #003973);  /* Chrome 10-25, Safari 5.1-6 */
+  background: #003973;  /* fallback for old browsers */  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, right top, left top, from(#E5E5BE), to(#003973));
   background: linear-gradient(to left, #E5E5BE, #003973); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   height: 250px;
 }
@@ -435,7 +436,8 @@ div .team-card {
 }
 
 .team-pic {
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  -webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+          box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   overflow: hidden;
   height: 280px;
 }
@@ -494,6 +496,7 @@ a:hover {
   /* width: 1140px; */
 height: 625px;
 background-image: -webkit-gradient(linear-gradient(rgba(65, 180, 228, .7),rgba(255, 66, 121, .9)));
+background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(65, 180, 228, .7)),to(rgba(255, 66, 121, .9)));
 background-image: linear-gradient(rgba(65, 180, 228, .7),rgba(255, 66, 121, .9));
 padding: 0;
 margin-right: 0px;
@@ -536,13 +539,16 @@ margin: 0 !important;
   z-index: 99999999;
   right: 0;
   color: #222 !important;
+  -webkit-transition: all 0.2s;
   transition: all 0.2s;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  -webkit-box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+          box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
 .drop-down-nav p {
   margin-bottom: 0;
   padding-top: 20px;
+  -webkit-transition: all 0.2s;
   transition: all 0.2s;
   cursor: pointer;
   font-weight: bold;
@@ -564,6 +570,7 @@ margin: 0 !important;
   font-weight: bold;
 }
 .drop-down-nav p i{
+  -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 
@@ -582,6 +589,7 @@ margin: 0 !important;
   color: #222 ;
   font-weight: 700;
   font-size: 14px;
+  -webkit-transition: all 0.2s;
   transition: all 0.2s;
   font-size: 24px;
 }
@@ -592,12 +600,19 @@ margin: 0 !important;
 }
 
 .about-page {
+   display: -webkit-box;
+   display: -ms-flexbox;
    display: flex;
-   flex-direction: column;
-   -webkit-align-items: center;
-   align-items: center;
-   -webkit-justify-content: center;
-   justify-content: center;
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+       -ms-flex-direction: column;
+           flex-direction: column;
+   -webkit-box-align: center;
+       -ms-flex-align: center;
+           align-items: center;
+   -webkit-box-pack: center;
+       -ms-flex-pack: center;
+           justify-content: center;
   height: 618px;
 }
 
@@ -778,4 +793,5 @@ margin: 0 !important;
   .section-nonprofits .large-6.columns {
     padding: 30px 1% 0 1%!important;
   }
+}
 }
