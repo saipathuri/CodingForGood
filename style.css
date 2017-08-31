@@ -20,12 +20,14 @@ body {
   font-family: 'Lato', sans-serif;
   font-size: 16px;
   color: #222;
+  overflow-x: hidden;
 }
 
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5 {
   font-family: 'Lato', sans-serif;
   font-weight: 300;
   color: #222;
@@ -35,7 +37,9 @@ section {
   padding: 45px 0;
 }
 
-
+h1 .button-heart {
+  font-size: 30px;
+}
 
 img {
    image-rendering: optimizeQuality;
@@ -194,7 +198,6 @@ li {
   border-radius: 2%;
   width: 100px;
 }
-
 .hero-button:hover {
   background-color: #e31b55;
 }
@@ -209,8 +212,8 @@ li {
   position: absolute;
   color: #fff;
   top: 43%;
-  left: 45%;
-  width: 900px;
+  left: 60%;
+  width: 100%;
   margin: 0;
   padding: 0;
   z-index: 1000;
@@ -242,6 +245,8 @@ li {
   height: 80vh;
   border-radius: 3px;
   display: table;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.10), 0 3px 6px rgba(0,0,0,0.18);
+
 }
 
 /*can't tell if elegant or hack*/
@@ -341,7 +346,7 @@ footer{
 }
 
 footer p {
-  text-align: left;
+  text-align: center;
   padding-left: 12px;
   margin-top: 88px;
   font-weight: bold;
@@ -355,8 +360,8 @@ footer p {
 /*single page */
 .single-page-text-box {
   position: absolute;
-  color: #fff;
-  top: 29%;
+  color: #222;
+  top: 22%;
   left: 50%;
   margin: 0;
   padding: 0;
@@ -372,9 +377,10 @@ footer p {
 /*page team*/
 
 .team-hero {
-  background-image: -webkit-gradient(linear-gradient(rgba(65, 180, 228, .7),rgba(255, 66, 121, .9)),url(img/hero-pic-3.jpg));
-  background-image: linear-gradient(rgba(65, 180, 228, .7),rgba(255, 66, 121, .9)),url(img/hero-pic-3.jpg);
-  height: 400px;
+  background: #003973;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #E5E5BE, #003973);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #E5E5BE, #003973); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 250px;
 }
 
 .team-card {
@@ -407,6 +413,10 @@ footer p {
   font-weight: 300;
 }
 
+.team-card img {
+  min-width: 100%;
+}
+
 div .team-card {
   margin-top: 20px;
 }
@@ -422,7 +432,18 @@ div .team-card {
 .team-pic {
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   overflow: hidden;
-  height: 350px;
+  height: 280px;
+}
+
+.team-links {
+  text-align: center;
+  font-size: 24px
+}
+.team-links i:first-of-type{
+  margin-right: 5px;
+}
+.team-links i:last-of-type{
+  margin-left: 5px;
 }
 
 a {
@@ -442,6 +463,14 @@ a:hover {
 
 .index-pic {
   margin-top: 15px;
+  text-align: center;
+}
+
+.index-pic img {
+}
+
+.index-pic-small {
+  display: none;
 }
 
 .google-form {
@@ -472,4 +501,260 @@ margin: 0 !important;
   left: 24%;
   color: #fff;
   text-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.fa-linkedin-square {
+  color: #0077b5;
+}
+.fa.fa-times {
+  position: relative;
+  display: none ;
+  float: right;
+  right: 10px;
+  top: 10px;
+  font-size: 30px !important;
+}
+
+.fa-bars {
+  float: right;
+  font-size: 30px !important;
+  display: none !important;
+
+}
+
+
+.drop-down-nav {
+  position: fixed;
+  display: none;
+  width: 0%;
+  height: 100%;
+  background: #fff;
+  z-index: 99999999;
+  right: 0;
+  color: #222 !important;
+  transition: all 0.2s;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.drop-down-nav p {
+  margin-bottom: 0;
+  padding-top: 20px;
+  transition: all 0.2s;
+  cursor: pointer;
+  font-weight: bold;
+
+}
+
+.drop-down-nav p:hover {
+  background-color: #f21d5b;
+  color: #fff;
+  font-weight: bold,
+}
+
+.drop-down-nav p:hover a{
+  color: #fff;
+  font-weight: bold;
+}
+.drop-down-nav p:hover i{
+  color: #fff;
+  font-weight: bold;
+}
+.drop-down-nav p i{
+  transition: all 0.2s;
+}
+
+.drop-down-nav p:first-of-type {
+  margin-top: 45px;
+}
+
+
+.drop-down-nav p {
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(34, 34, 34, 0.12);
+}
+
+
+.drop-down-nav a {
+  color: #222 ;
+  font-weight: 700;
+  font-size: 14px;
+  transition: all 0.2s;
+
+}
+
+.button-heart {
+  padding-left: 2px;
+  color: #f21d5b;
+}
+
+@media (max-width: 1210px) {
+  .logo-main-page,
+  .logo-non-main-page {
+    margin-top: 7px;
+    width: 300px;
+  }
+  .hero-text-container {
+    left: 50%;
+  }
+
+  .hero-text-container p,
+  .hero-text-container a {
+    text-align: center;
+    padding-left: 0px;
+  }
+
+  .hero-text-container h1 {
+    text-align: center;
+    padding-left: 0px;
+  }
+}
+
+
+@media (max-width: 1021px) {
+  .section-students .large-6 ,
+  .section-nonprofits .large-6.columns {
+    padding: 30px 20% 0 20%!important;
+  }
+  .section-students .primary-button ,
+  .section-nonprofits .primary-button {
+  }
+
+  .index-pic {
+    padding-bottom: 30px;
+  }
+
+  .index-pic-small {
+    padding-bottom: 30px;
+    text-align: center;
+    display: block;
+  }
+
+  .index-pic-students {
+    display: none;
+  }
+}
+@media (max-width: 1045px) {
+  .logo-main-page,
+  .logo-non-main-page {
+    width: 250px;
+  }
+  .index-nav li,
+  .nav-ul li{
+    display: none;
+  }
+
+  .fa-bars {
+    display: block !important
+  }
+}
+
+@media (max-width: 930px) {
+  .team-pic {
+    height: 250px;
+  }
+}
+@media (max-width: 840px) {
+  .team-pic {
+    height: 210px;
+  }
+}
+@media (max-width: 800px) {
+  .logo-non-main-page {
+    margin-top: 10px;
+  }
+  .logo-main-page,
+  .logo-non-main-page {
+    width: 210px;
+  }
+}
+@media (max-width: 720px) {
+  .team-pic {
+    height: 180px;
+  }
+}
+@media (max-width: 640px) {
+  h1 .button-heart {
+    font-size: 20px;
+  }
+
+}
+@media (max-width: 638px) {
+  .team-pic {
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 560px) {
+  .section-students .large-6 ,
+  .section-nonprofits .large-6.columns {
+    padding: 30px 8% 0 8%!important;
+  }
+  footer p {
+    font-size: 14px;
+  }
+}
+
+
+@media (max-width: 500px) {
+  footer p {
+    font-size: 11px;
+  }
+  .section-students .large-6 ,
+  .section-nonprofits .large-6.columns {
+    padding: 30px 3% 0 3%!important;
+  }
+  .section-students .primary-button  {
+    margin-left: 39%;
+    margin-top: 10px;
+  }
+  .section-students h1,
+  .section-nonprofits h1 {
+    font-weight: bold;
+    font-size: 200%;
+  }
+  .section-nonprofits .primary-button  {
+    margin-left: 35%;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 370px) {
+  footer p {
+    font-size: 10px;
+  }
+  .section-students .primary-button  {
+    margin-left: 38%;
+  }
+
+  .section-nonprofits .primary-button  {
+    margin-left: 34%;
+  }
+}
+@media (max-width: 360px) {
+  .section-students .primary-button  {
+    margin-left: 34%;
+  }
+
+  .section-nonprofits .primary-button  {
+    margin-left: 30%;
+  }
+@media (max-width: 345px) {
+  .section-students .primary-button  {
+    margin-left: 32%;
+  }
+
+  .section-nonprofits .primary-button  {
+    margin-left: 28%;
+  }
+}
+@media (max-width: 300px) {
+  .section-students .large-6 ,
+  .section-nonprofits .large-6.columns {
+    padding: 30px 1% 0 1%!important;
+  }
+  .section-students .large-6 ,
+  .section-nonprofits .large-6.columns {
+    padding: 30px 1% 0 1%!important;
+  }
 }

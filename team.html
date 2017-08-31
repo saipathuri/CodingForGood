@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -6,65 +7,30 @@
     <link rel="stylesheet" href="vendor/foundation.min.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+      <script async>(function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
   </head>
 
-<body>
-  <header class="sticky-nav">
-  <div class="header-wrap">
-    <nav>
-      <div class="row">
-        <a href="index.html"><img src="img/logo-blue.png" width="350" alt=""></a>
-        <ul class="nav-ul text-right float-right">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="events.html">Events</a></li>
-          <li><a href="team.html">Team</a></li>
-          <li><a href="join.html">Join</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="about.html">About</a></li>
-        </ul>
-      </div>
-    </nav>
-</header>
-
-  <link rel="stylesheet" href="font-awesome.min.css">
-
-    <section class="coming-soon">
-      <h1>PAGE UNDER CONSTRUCTION! <i class="fa fa-cog" aria-hidden="true"></i></h1>
-    </section>
-<footer>
-  <div class="row">
-    <div class="large-6 columns text-center">
-      <p>© Copyright 2017 Coding For Good, All Rights Reserved</p>
-    </div>
-    <div class="large-6 columns text-center facebook-div">
-      <div class="fb-page" data-href="https://www.facebook.com/codingforgoodutd" data-tabs="timeline" data-height="100" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/codingforgoodutd" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/codingforgoodutd">Coding For Good</a></blockquote></div>
-    </div>
+<body><link rel="stylesheet" href="font-awesome.min.css">
+  <div class="drop-down-nav">
+    <i class="fa fa-times" aria-hidden="true" onclick="closeNav()"></i>
+    <p class="drop-down-nav-heart">( <i class="fa fa-heart button-heart" aria-hidden="true"></i> );</p>
+    <p onclick="location.href = 'projects.html';"><a href="projects.html">Projects</a></p>
+    <p onclick="location.href = 'events.html';"><a href="events.html">Events</a></p>
+    <p onclick="location.href = 'team.html';"><a href="team.html">Team</a></p>
+    <p onclick="location.href = 'join.html';"><a href="join.html">Join</a></p>
+    <p onclick="location.href = 'contact.html';"><a href="contact.html">Non Profits</a></p>
+    <p onclick="about.html';"><a href="about.html">About</a></p>
   </div>
-</footer>
-</main>
-</body>
-<script src="noframework.waypoints.min.js"></script>
-<script src="app.js"></script>
-</html>
-
-
-<!-- <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <link rel="stylesheet" href="vendor/foundation.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-  </head>
-
-<body>
   <header class="sticky-nav">
   <div class="header-wrap">
     <nav>
       <div class="row">
-        <a href="index.html"><img src="img/logo-blue.png" width="350" alt=""></a>
+        <a href="index.html"><img src="img/logo-blue.png" width="350" alt="Coding For Good UTD" class="logo-non-main-page"></a>
         <ul class="nav-ul text-right float-right">
           <li><a href="index.html">Home</a></li>
           <li><a href="projects.html">Projects</a></li>
@@ -73,7 +39,23 @@
           <li><a href="join.html">Join</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li><a href="about.html">About</a></li>
+          <i class="fa fa-bars" style="color: #222;" aria-hidden="true" onclick="openNav()"></i>
+          <script type="text/javascript">
+            var dropDownNav = document.querySelector(".drop-down-nav");
+            var faTimes = document.querySelector(".fa-times");
+            var faBars = document.querySelector(".fa-bars");
+            function closeNav() {
+              dropDownNav.style.width = 0;
+              faTimes.style.display = 'none';
+            }
+            function openNav() {
+              dropDownNav.style.width = '80%';
+              dropDownNav.style.display = 'block';
+              faTimes.style.display = 'block';
+            }
+          </script>
         </ul>
+
       </div>
     </nav>
 </header>
@@ -87,95 +69,55 @@
     <section>
       <div class="row">
         <div class="large-12">
-          <div class="large-4 columns">
+          <div class="medium-4 columns">
             <div class="team-card">
               <div class="team-pic">
                 <img src="img/saman.jpg" alt="">
               </div>
               <h2 class="text-center">Saman Attar</h2>
               <div class="officer-position text-center">Executive Something</div>
-
+              <div class="team-links">
+                <i onclick="location.href = 'https://github.com/Attar310';" class="fa fa-github" aria-hidden="true"></i>
+                <i onclick="location.href = 'https://www.linkedin.com/in/saman-attar/';" class="fa fa-linkedin-square" aria-hidden="true"></i>
+              </div>
             </div>
           </div>
-          <div class="large-4 columns">
+          <div class="medium-4 columns">
             <div class="team-card">
               <div class="team-pic">
                 <img src="img/shayan.jpg" alt="">
               </div>
               <h2 class="text-center">Shayan Javadi</h2>
               <div class="officer-position text-center">Executive Something</div>
-
+              <div class="team-links">
+                <i onclick="location.href = 'https://github.com/ShayanJavadi';" class="fa fa-github" aria-hidden="true"></i>
+                <i onclick="location.href = 'https://www.linkedin.com/in/shayan-javadi/';" class="fa fa-linkedin-square" aria-hidden="true"></i>
+              </div>
             </div>
           </div>
-          <div class="large-4 columns">
+          <div class="medium-4 columns">
             <div class="team-card">
               <div class="team-pic">
                 <img src="img/sai.jpg" alt="">
               </div>
               <h2 class="text-center">Sai Pathuri</h2>
               <div class="officer-position text-center">Executive Something</div>
-
+              <div class="team-links">
+                <i onclick="location.href = 'https://github.com/saipathuri';" class="fa fa-github" aria-hidden="true"></i>
+                <i onclick="ocation.href = 'https://www.linkedin.com/in/saipathuri/';" class="fa fa-linkedin-square" aria-hidden="true"></i>
+              </div>
             </div>
           </div>
-          <div class="large-4 columns">
-            <div class="team-card">
-              <img src="img/guy.png" alt="">
-              <h2 class="text-center">Shayan Javadi</h2>
-              <div class="officer-position text-center">Executive Something</div>
-
-            </div>
-          </div>
-          <div class="large-4 columns">
-            <div class="team-card">
-              <img src="img/guy.png" alt="">
-              <h2 class="text-center">Shayan Javadi</h2>
-              <div class="officer-position text-center">Executive Something</div>
-
-            </div>
-          </div>
-          <div class="large-4 columns">
-            <div class="team-card">
-              <img src="img/guy.png" alt="">
-              <h2 class="text-center">Shayan Javadi</h2>
-              <div class="officer-position text-center">Executive Something</div>
-
-            </div>
-          </div>
-          <div class="large-4 columns">
-            <div class="team-card">
-              <img src="img/guy.png" alt="">
-              <h2 class="text-center">Shayan Javadi</h2>
-              <div class="officer-position text-center">Executive Something</div>
-
-            </div>
-          </div>
-          <div class="large-4 columns">
-            <div class="team-card">
-              <img src="img/guy.png" alt="">
-              <h2 class="text-center">Shayan Javadi</h2>
-              <div class="officer-position text-center">Executive Something</div>
-
-            </div>
-          </div>
-          <div class="large-4 columns">
-            <div class="team-card">
-              <img src="img/guy.png" alt="">
-              <h2 class="text-center">Shayan Javadi</h2>
-              <div class="officer-position text-center">Executive Something</div>
-
-            </div>
-          </div>
-
         </div>
       </div>
 
     </section>
 <footer>
   <div class="row">
-    <div class="large-6 columns text-center">
+    <div class="small-6 columns text-center">
       <p>© Copyright 2017 Coding For Good, All Rights Reserved</p>
     </div>
-    <div class="large-6 columns text-center facebook-div">
+    <div class="small-6 columns text-center facebook-div">
       <div class="fb-page" data-href="https://www.facebook.com/codingforgoodutd" data-tabs="timeline" data-height="100" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/codingforgoodutd" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/codingforgoodutd">Coding For Good</a></blockquote></div>
     </div>
   </div>
@@ -185,4 +127,3 @@
 <script src="noframework.waypoints.min.js"></script>
 <script src="app.js"></script>
 </html>
- -->
