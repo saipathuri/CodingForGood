@@ -1,5 +1,6 @@
 <?php include 'header.php' ?>
-<body>
+<body><link rel="stylesheet" href="font-awesome.min.css">
+
   <?php include 'nav.php' ?>
   <main>
       <div class="team-hero">

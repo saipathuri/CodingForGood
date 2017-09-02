@@ -2,7 +2,7 @@
   <div class="header-wrap">
     <nav>
       <div class="row">
-        <a href="index.php"><img src="img/logo-blue.png" width="350" alt=""></a>
+        <a href="index.php"><img src="img/logo-blue.png" width="350" alt="Coding For Good UTD" class="logo-non-main-page"></a>
         <ul class="nav-ul text-right float-right">
           <li><a href="index.php">Home</a></li>
           <li><a href="projects.php">Projects</a></li>
